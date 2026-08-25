@@ -35,7 +35,7 @@ export default function Projects() {
             </span>
           </div>
           <span className="font-mono text-xs text-neutral-500 tracking-wider">
-            {projects.length} PRODUCTION & ML PROJECTS
+            {projects.length} FEATURED PRODUCTION PROJECTS
           </span>
         </div>
 
