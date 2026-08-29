@@ -28,7 +28,7 @@ export const portfolioData = {
       {
         id: "mlops-devops",
         name: "MLOps & Cloud DevOps",
-        color: "#ccff00",
+        color: "#ff7a00",
         description: "Containerization, automated pipelines & cloud infrastructure",
         skills: [
           { name: "Docker", level: "Proficient", icon: "Container" },
@@ -46,7 +46,7 @@ export const portfolioData = {
       {
         id: "ml-data",
         name: "Machine Learning & Data",
-        color: "#00f0ff",
+        color: "#ff3d7f",
         description: "Predictive models, mathematical analysis & data processing",
         skills: [
           { name: "Scikit-learn", level: "Proficient", icon: "Binary" },
@@ -62,7 +62,7 @@ export const portfolioData = {
       {
         id: "backend-db",
         name: "Backend & Databases",
-        color: "#ff007f",
+        color: "#ffc107",
         description: "High-performance APIs, CRUD workflows & relational data design",
         skills: [
           { name: "FastAPI", level: "Proficient", icon: "Zap" },
@@ -78,7 +78,7 @@ export const portfolioData = {
       {
         id: "frontend-core",
         name: "Frontend & Programming",
-        color: "#ffb703",
+        color: "#ff9100",
         description: "Modern component-driven UI and core languages",
         skills: [
           { name: "Python", level: "Expert", icon: "Code" },
@@ -110,7 +110,7 @@ export const portfolioData = {
         "Collaborating on deployment pipelines, server configurations, and database query optimization for high-availability production workloads.",
       ],
       techStack: ["React.js", "Node.js", "Express.js", "MySQL", "Tailwind CSS", "REST APIs", "Git"],
-      accent: "#ccff00",
+      accent: "#ff7a00",
     },
     {
       id: "eclerx",
@@ -126,7 +126,7 @@ export const portfolioData = {
         "Demonstrated multitasking and analytical troubleshooting capabilities under tight operational turnaround times.",
       ],
       techStack: ["Process Workflows", "Analytical Problem Solving", "Technical Communication", "SLA Adherence"],
-      accent: "#00f0ff",
+      accent: "#ff3d7f",
     },
   ],
 
@@ -145,7 +145,7 @@ export const portfolioData = {
         "Configured and deployed production instances on Hostinger VPS, setting up reverse proxying, environment configurations, and continuous backend stability.",
       ],
       stack: ["React.js", "Node.js", "Express.js", "MySQL", "Tailwind CSS", "Hostinger VPS", "REST APIs"],
-      color: "#ccff00",
+      color: "#ff7a00",
       featured: true,
       github: "https://github.com/khomaneshivam",
       demo: "#",
@@ -165,7 +165,7 @@ export const portfolioData = {
         "Focused on data consistency and robust error handling to prevent double-booking anomalies.",
       ],
       stack: ["React.js", "Node.js", "Express.js", "MySQL", "REST APIs", "Tailwind CSS"],
-      color: "#00f0ff",
+      color: "#ff3d7f",
       featured: true,
       github: "https://github.com/khomaneshivam",
       demo: "#",

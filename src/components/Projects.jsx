@@ -25,7 +25,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="section relative border-b border-white/10 bg-[#08080a]">
+    <section id="projects" className="section relative border-b border-white/10 bg-[#0f1420]">
       <div className="shell">
         {/* Section Header */}
         <div className="flex items-center justify-between pb-6 mb-12 border-b border-white/10">
@@ -34,7 +34,7 @@ export default function Projects() {
               02 // FEATURED WORK & SYSTEMS
             </span>
           </div>
-          <span className="font-mono text-xs text-neutral-500 tracking-wider">
+          <span className="font-mono text-xs text-neutral-400 tracking-wider">
             {projects.length} FEATURED PRODUCTION PROJECTS
           </span>
         </div>
@@ -43,7 +43,7 @@ export default function Projects() {
         <div className="mb-14">
           <h2 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] text-white tracking-tight uppercase">
             SELECTED <span className="stroke-text">PROJECTS</span> &{' '}
-            <span className="serif-it text-[var(--accent)] normal-case">Architectures</span>
+            <span className="serif-it text-gradient normal-case">Architectures</span>
           </h2>
           <p className="font-mono text-xs text-neutral-400 mt-4 tracking-wider">
             CLICK ON ANY ROW TO EXPAND ARCHITECTURAL HIGHLIGHTS, STACK & REPOSITORIES
@@ -61,7 +61,7 @@ export default function Projects() {
                 key={proj.id}
                 data-cursor="view"
                 className={`border-b border-white/10 transition-colors ${
-                  isOpen ? 'bg-[#0e0e12]' : 'hover:bg-white/[0.02]'
+                  isOpen ? 'bg-[#1a1f2e]' : 'hover:bg-white/[0.03]'
                 }`}
               >
                 {/* Header Row */}
@@ -173,7 +173,7 @@ export default function Projects() {
       {/* Project Deep Dive Modal */}
       {modalProject && (
         <div className="fixed inset-0 z-[9600] flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md animate-fadeIn">
-          <div className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto bg-[#0e0e12] border border-[var(--accent)]/40 p-6 sm:p-8 rounded-sm shadow-2xl">
+          <div className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto bg-[#1a1f2e] border border-[var(--accent)]/40 p-6 sm:p-8 rounded-sm shadow-2xl">
             {/* Close button */}
             <button
               onClick={closeModal}

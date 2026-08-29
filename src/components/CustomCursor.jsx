@@ -76,7 +76,7 @@ export default function CustomCursor() {
       <div
         className={`fixed pointer-events-none z-[9999] rounded-full grid place-items-center transition-all duration-300 ease-out border ${
           cursorState === 'view'
-            ? 'w-20 h-20 bg-[var(--accent)] border-[var(--accent)] text-black font-mono text-[10px] font-bold tracking-widest'
+            ? 'w-20 h-20 bg-[var(--accent)] border-[var(--accent)] text-[#1a1f2e] font-mono text-[10px] font-bold tracking-widest shadow-[0_0_20px_var(--accent-glow)]'
             : cursorState === 'link'
             ? 'w-12 h-12 bg-[var(--accent)]/15 border-[var(--accent)] scale-110'
             : 'w-7 h-7 bg-transparent border-[var(--accent)] opacity-70'

@@ -28,15 +28,15 @@ export default function Preloader({ onComplete }) {
 
   return (
     <div
-      className={`fixed inset-0 z-[9990] overflow-hidden bg-[#08080a] text-[#efebe4] transition-all duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] ${
+      className={`fixed inset-0 z-[9990] overflow-hidden bg-[#0f1420] text-[#fff3e0] transition-all duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] ${
         isDone ? 'opacity-0 pointer-events-none -translate-y-full' : 'opacity-100'
       }`}
     >
       {/* Background Architectural Grid Lines */}
       <div className="absolute inset-0 grid grid-cols-4 pointer-events-none opacity-20">
-        <div className="border-r border-[#efebe4]/10 h-full" />
-        <div className="border-r border-[#efebe4]/10 h-full" />
-        <div className="border-r border-[#efebe4]/10 h-full" />
+        <div className="border-r border-[#fff3e0]/10 h-full" />
+        <div className="border-r border-[#fff3e0]/10 h-full" />
+        <div className="border-r border-[#fff3e0]/10 h-full" />
         <div className="h-full" />
       </div>
 

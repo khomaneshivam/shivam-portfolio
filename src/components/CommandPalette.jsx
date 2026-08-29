@@ -10,16 +10,18 @@ export default function CommandPalette({ isOpen, onClose, onOpenTerminal, onOpen
   const inputRef = useRef(null);
 
   const themes = [
-    { name: 'Neon Lime (Default)', id: 'lime', color: '#ccff00' },
+    { name: 'Flame Orange (Default)', id: 'flame', color: '#ff7a00' },
+    { name: 'Vivid Rose', id: 'rose', color: '#ff3d7f' },
+    { name: 'Golden Amber', id: 'gold', color: '#ffc107' },
+    { name: 'Neon Lime', id: 'lime', color: '#ccff00' },
     { name: 'Cyber Cyan', id: 'cyan', color: '#00f0ff' },
     { name: 'Matrix Green', id: 'matrix', color: '#00ff66' },
     { name: 'Cyber Purple', id: 'purple', color: '#d946ef' },
-    { name: 'Solar Amber', id: 'amber', color: '#ffb703' },
   ];
 
   const changeTheme = (themeId) => {
     document.body.removeAttribute('data-theme');
-    if (themeId !== 'lime') {
+    if (themeId !== 'flame') {
       document.body.setAttribute('data-theme', themeId);
     }
     showToast(`Accent theme switched to ${themeId.toUpperCase()}`);
@@ -173,9 +175,9 @@ export default function CommandPalette({ isOpen, onClose, onOpenTerminal, onOpen
         </div>
       )}
 
-      <div className="relative w-full max-w-xl bg-[#0e0e12] border border-white/20 rounded-sm shadow-2xl overflow-hidden flex flex-col">
+      <div className="relative w-full max-w-xl bg-[#1a1f2e] border border-white/20 rounded-sm shadow-2xl overflow-hidden flex flex-col">
         {/* Search Field */}
-        <div className="flex items-center gap-3 px-4 py-3.5 border-b border-white/10 bg-[#141419]">
+        <div className="flex items-center gap-3 px-4 py-3.5 border-b border-white/10 bg-[#242c3f]">
           <Search className="w-4 h-4 text-[var(--accent)] shrink-0" />
           <input
             ref={inputRef}

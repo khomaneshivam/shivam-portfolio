@@ -9,26 +9,28 @@ export default {
     extend: {
       colors: {
         bg: {
-          DEFAULT: '#08080a',
-          elev: '#0e0e12',
-          elev2: '#141419',
-          elev3: '#1a1a22',
+          DEFAULT: '#0f1420',
+          elev: '#1a1f2e',
+          elev2: '#242c3f',
+          elev3: '#2f384f',
         },
         text: {
-          DEFAULT: '#efebe4',
-          dim: '#9a968e',
-          mute: '#5d5a55',
+          DEFAULT: '#fff3e0',
+          dim: '#c6beb3',
+          mute: '#7a7570',
         },
         accent: {
-          DEFAULT: 'var(--accent-color, #ccff00)',
-          dim: 'var(--accent-dim, rgba(204, 255, 0, 0.15))',
-          glow: 'var(--accent-glow, rgba(204, 255, 0, 0.35))',
-          hover: 'var(--accent-hover, #d9ff33)',
+          DEFAULT: 'var(--accent, #ff7a00)',
+          rose: '#ff3d7f',
+          gold: '#ffc107',
+          dim: 'var(--accent-dim, rgba(255, 122, 0, 0.16))',
+          glow: 'var(--accent-glow, rgba(255, 122, 0, 0.45))',
+          hover: 'var(--accent-hover, #ff8f26)',
         },
         line: {
-          DEFAULT: 'rgba(239, 235, 228, 0.12)',
-          soft: 'rgba(239, 235, 228, 0.06)',
-          strong: 'rgba(239, 235, 228, 0.22)',
+          DEFAULT: 'rgba(255, 243, 224, 0.10)',
+          soft: 'rgba(255, 243, 224, 0.05)',
+          strong: 'rgba(255, 243, 224, 0.22)',
         },
       },
       fontFamily: {

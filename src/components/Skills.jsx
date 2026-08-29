@@ -19,7 +19,7 @@ export default function Skills() {
   });
 
   return (
-    <section id="skills" className="section relative border-b border-white/10 bg-[#08080a]">
+    <section id="skills" className="section relative border-b border-white/10 bg-[#0f1420]">
       <div className="shell">
         {/* Section Header */}
         <div className="flex items-center justify-between pb-6 mb-12 border-b border-white/10">
@@ -28,7 +28,7 @@ export default function Skills() {
               04 // TECHNICAL SKILLS & STACK
             </span>
           </div>
-          <span className="font-mono text-xs text-neutral-500 tracking-wider">
+          <span className="font-mono text-xs text-neutral-400 tracking-wider">
             SYSTEMS • MLOPS • FULL-STACK
           </span>
         </div>
@@ -37,7 +37,7 @@ export default function Skills() {
         <div className="mb-12">
           <h2 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] text-white tracking-tight uppercase">
             TECHNICAL <span className="stroke-text">ARSENAL</span> &{' '}
-            <span className="serif-it text-[var(--accent)] normal-case">Stack</span>
+            <span className="serif-it text-gradient normal-case">Stack</span>
           </h2>
         </div>
 
@@ -52,7 +52,7 @@ export default function Skills() {
               }}
               className={`px-4 py-2 rounded-sm font-mono text-xs uppercase tracking-wider transition-all shrink-0 ${
                 activeCategory === 'all'
-                  ? 'bg-[var(--accent)] text-black font-bold'
+                  ? 'bg-[var(--accent)] text-[#1a1f2e] font-bold shadow-[0_0_15px_var(--accent-glow)]'
                   : 'bg-white/5 border border-white/10 text-neutral-400 hover:text-white'
               }`}
             >
@@ -67,7 +67,7 @@ export default function Skills() {
                 }}
                 className={`px-4 py-2 rounded-sm font-mono text-xs uppercase tracking-wider transition-all shrink-0 ${
                   activeCategory === cat.id
-                    ? 'bg-[var(--accent)] text-black font-bold'
+                    ? 'bg-[var(--accent)] text-[#1a1f2e] font-bold shadow-[0_0_15px_var(--accent-glow)]'
                     : 'bg-white/5 border border-white/10 text-neutral-400 hover:text-white'
                 }`}
               >
@@ -84,7 +84,7 @@ export default function Skills() {
               placeholder="Search skill (e.g. Docker, AWS, React)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#0e0e12] border border-white/15 pl-9 pr-4 py-2 rounded-sm font-mono text-xs text-white placeholder:text-neutral-600 focus:border-[var(--accent)] focus:outline-none transition-colors"
+              className="w-full bg-[#1a1f2e] border border-white/15 pl-9 pr-4 py-2 rounded-sm font-mono text-xs text-white placeholder:text-neutral-500 focus:border-[var(--accent)] focus:outline-none transition-colors"
             />
           </div>
         </div>
@@ -94,7 +94,7 @@ export default function Skills() {
           {filteredCategories.map((cat) => (
             <div
               key={cat.id}
-              className="p-6 sm:p-8 rounded-sm bg-[#0e0e12] border border-white/10 flex flex-col gap-6"
+              className="p-6 sm:p-8 rounded-sm bg-[#1a1f2e] border border-white/10 flex flex-col gap-6"
             >
               <div className="flex items-center justify-between pb-4 border-b border-white/10">
                 <div>

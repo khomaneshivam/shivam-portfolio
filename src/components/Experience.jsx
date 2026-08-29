@@ -7,7 +7,7 @@ export default function Experience() {
   const { experience } = portfolioData;
 
   return (
-    <section id="experience" className="section relative border-b border-white/10 bg-[#08080a]">
+    <section id="experience" className="section relative border-b border-white/10 bg-[#0f1420]">
       <div className="shell">
         {/* Section Header */}
         <div className="flex items-center justify-between pb-6 mb-12 border-b border-white/10">
@@ -16,7 +16,7 @@ export default function Experience() {
               03 // CAREER & WORK HISTORY
             </span>
           </div>
-          <span className="font-mono text-xs text-neutral-500 tracking-wider">
+          <span className="font-mono text-xs text-neutral-400 tracking-wider">
             SOFTWARE & ANALYTICS EXPERIENCE
           </span>
         </div>
@@ -25,7 +25,7 @@ export default function Experience() {
         <div className="mb-14">
           <h2 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] text-white tracking-tight uppercase">
             WORK <span className="stroke-text">EXPERIENCE</span> &{' '}
-            <span className="serif-it text-[var(--accent)] normal-case">Production</span> ROLES
+            <span className="serif-it text-gradient normal-case">Production</span> ROLES
           </h2>
         </div>
 
@@ -35,7 +35,7 @@ export default function Experience() {
             <div
               key={exp.id}
               onMouseEnter={playTick}
-              className="group p-6 sm:p-8 rounded-sm bg-[#0e0e12] border border-white/10 hover:border-[var(--accent)]/50 hover:bg-[#141419] transition-all duration-300 relative overflow-hidden"
+              className="group p-6 sm:p-8 rounded-sm bg-[#1a1f2e] border border-white/10 hover:border-[var(--accent)]/50 hover:bg-[#242c3f] transition-all duration-300 relative overflow-hidden"
             >
               {/* Top Row: Role, Company, Period */}
               <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-white/10">

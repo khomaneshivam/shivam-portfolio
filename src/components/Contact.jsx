@@ -61,7 +61,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="section relative bg-[#08080a] pb-24">
+    <section id="contact" className="section relative bg-[#0f1420] pb-24">
       <div className="shell">
         {/* Section Header */}
         <div className="flex items-center justify-between pb-6 mb-12 border-b border-white/10">
@@ -70,7 +70,7 @@ export default function Contact() {
               07 // CONNECT & INQUIRE
             </span>
           </div>
-          <span className="font-mono text-xs text-neutral-500 tracking-wider">
+          <span className="font-mono text-xs text-neutral-400 tracking-wider">
             AVAILABLE FOR OPPORTUNITIES
           </span>
         </div>
@@ -79,7 +79,7 @@ export default function Contact() {
         <div className="mb-16">
           <h2 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] text-white tracking-tight uppercase">
             LET'S <span className="stroke-text">BUILD</span> SOMETHING{' '}
-            <span className="serif-it text-[var(--accent)] normal-case">Exceptional</span>
+            <span className="serif-it text-gradient normal-case">Exceptional</span>
           </h2>
         </div>
 
@@ -157,7 +157,7 @@ export default function Contact() {
           </div>
 
           {/* Right Direct Message Form */}
-          <div className="lg:col-span-6 p-6 sm:p-8 rounded-sm bg-[#0e0e12] border border-white/10 relative">
+          <div className="lg:col-span-6 p-6 sm:p-8 rounded-sm bg-[#1a1f2e] border border-white/10 relative">
             <div className="flex items-center justify-between pb-4 mb-6 border-b border-white/10">
               <span className="font-mono text-xs text-[var(--accent)] uppercase tracking-wider">
                 // TRANSMIT DIRECT MESSAGE
@@ -176,7 +176,7 @@ export default function Contact() {
                   placeholder="e.g. John Doe"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full bg-[#141419] border border-white/15 p-3 rounded-sm font-sans text-sm text-white placeholder:text-neutral-600 focus:border-[var(--accent)] focus:outline-none transition-colors"
+                  className="w-full bg-[#242c3f] border border-white/15 p-3 rounded-sm font-sans text-sm text-white placeholder:text-neutral-500 focus:border-[var(--accent)] focus:outline-none transition-colors"
                 />
               </div>
 
@@ -190,7 +190,7 @@ export default function Contact() {
                   placeholder="e.g. john@example.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full bg-[#141419] border border-white/15 p-3 rounded-sm font-sans text-sm text-white placeholder:text-neutral-600 focus:border-[var(--accent)] focus:outline-none transition-colors"
+                  className="w-full bg-[#242c3f] border border-white/15 p-3 rounded-sm font-sans text-sm text-white placeholder:text-neutral-500 focus:border-[var(--accent)] focus:outline-none transition-colors"
                 />
               </div>
 
@@ -204,14 +204,14 @@ export default function Contact() {
                   placeholder="Describe your project, team opportunity, or inquiry..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-[#141419] border border-white/15 p-3 rounded-sm font-sans text-sm text-white placeholder:text-neutral-600 focus:border-[var(--accent)] focus:outline-none transition-colors resize-none"
+                  className="w-full bg-[#242c3f] border border-white/15 p-3 rounded-sm font-sans text-sm text-white placeholder:text-neutral-500 focus:border-[var(--accent)] focus:outline-none transition-colors resize-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={formStatus === 'sending'}
-                className="w-full py-3.5 bg-[var(--accent)] text-black font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[var(--accent-hover)] transition-all mt-2"
+                className="w-full py-3.5 bg-[var(--accent)] text-[#1a1f2e] font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[var(--accent-hover)] transition-all shadow-[0_0_20px_var(--accent-glow)] mt-2"
               >
                 {formStatus === 'sending' ? (
                   <span>TRANSMITTING...</span>

@@ -67,7 +67,7 @@ export default function Navbar({ onOpenCommandPalette, onOpenTerminal }) {
       <header
         className={`fixed top-0 left-0 right-0 z-[900] h-[76px] transition-all duration-500 ${
           isScrolled
-            ? 'bg-[#08080a]/85 backdrop-blur-md border-b border-white/10 shadow-2xl'
+            ? 'bg-[#101420]/85 backdrop-blur-md border-b border-white/10 shadow-2xl'
             : 'bg-transparent border-b border-transparent'
         }`}
       >
@@ -81,7 +81,7 @@ export default function Navbar({ onOpenCommandPalette, onOpenTerminal }) {
             }}
             className="flex items-center gap-3 group"
           >
-            <div className="w-8 h-8 rounded-sm bg-white/5 border border-white/15 grid place-items-center font-mono text-xs font-bold text-[var(--accent)] group-hover:border-[var(--accent)] group-hover:bg-[var(--accent)]/10 transition-all duration-300">
+            <div className="w-8 h-8 rounded-sm bg-[#1a1f2e] border border-[var(--accent)]/40 grid place-items-center font-mono text-xs font-bold text-[var(--accent)] group-hover:border-[var(--accent)] group-hover:bg-[var(--accent)]/15 group-hover:shadow-[0_0_15px_var(--accent-glow)] transition-all duration-300">
               SK
             </div>
             <div className="flex flex-col">
@@ -184,7 +184,7 @@ export default function Navbar({ onOpenCommandPalette, onOpenTerminal }) {
 
       {/* Fullscreen Mobile Drawer */}
       <div
-        className={`fixed inset-0 z-[850] bg-[#0c0c10]/98 backdrop-blur-2xl transition-all duration-500 lg:hidden flex flex-col justify-between p-8 pt-28 ${
+        className={`fixed inset-0 z-[850] bg-[#101420]/98 backdrop-blur-2xl transition-all duration-500 lg:hidden flex flex-col justify-between p-8 pt-28 ${
           mobileMenuOpen ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none -translate-y-full'
         }`}
       >

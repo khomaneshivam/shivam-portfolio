@@ -3,23 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --bg: #08080a;
-  --bg-elev: #0e0e12;
-  --bg-elev-2: #141419;
-  --bg-elev-3: #1c1c24;
-  --text: #efebe4;
-  --text-dim: #9a968e;
-  --text-mute: #5d5a55;
-  --line: rgba(239, 235, 228, 0.12);
-  --line-soft: rgba(239, 235, 228, 0.06);
-  --line-strong: rgba(239, 235, 228, 0.24);
+  --bg: #0f1420;
+  --bg-elev: #1a1f2e;
+  --bg-elev-2: #242c3f;
+  --bg-elev-3: #2f384f;
+  --text: #fff3e0;
+  --text-dim: #c6beb3;
+  --text-mute: #7a7570;
+  --line: rgba(255, 243, 224, 0.10);
+  --line-soft: rgba(255, 243, 224, 0.05);
+  --line-strong: rgba(255, 243, 224, 0.22);
   
-  /* Theme Accents (default: Lime #ccff00) */
-  --accent: #ccff00;
-  --accent-dim: rgba(204, 255, 0, 0.15);
-  --accent-glow: rgba(204, 255, 0, 0.4);
-  --accent-hover: #d9ff33;
-  --accent-rgb: 204, 255, 0;
+  /* Flexit Signature Palette (#1A1F2E, #FF7A00, #FF3D7F, #FFC107, #FFF3E0) */
+  --accent: #ff7a00;
+  --accent-rose: #ff3d7f;
+  --accent-gold: #ffc107;
+  --accent-cream: #fff3e0;
+  --accent-navy: #1a1f2e;
+  --accent-dim: rgba(255, 122, 0, 0.16);
+  --accent-glow: rgba(255, 122, 0, 0.45);
+  --accent-hover: #ff8f26;
+  --accent-rgb: 255, 122, 0;
 
   --font-display: "Anton", sans-serif;
   --font-serif: "Instrument Serif", Georgia, serif;
@@ -33,12 +37,36 @@
 }
 
 /* Theme classes */
+body[data-theme="rose"] {
+  --accent: #ff3d7f;
+  --accent-dim: rgba(255, 61, 127, 0.16);
+  --accent-glow: rgba(255, 61, 127, 0.45);
+  --accent-hover: #ff5c93;
+  --accent-rgb: 255, 61, 127;
+}
+
+body[data-theme="gold"] {
+  --accent: #ffc107;
+  --accent-dim: rgba(255, 193, 7, 0.16);
+  --accent-glow: rgba(255, 193, 7, 0.45);
+  --accent-hover: #ffd043;
+  --accent-rgb: 255, 193, 7;
+}
+
 body[data-theme="cyan"] {
   --accent: #00f0ff;
   --accent-dim: rgba(0, 240, 255, 0.15);
   --accent-glow: rgba(0, 240, 255, 0.4);
   --accent-hover: #33f3ff;
   --accent-rgb: 0, 240, 255;
+}
+
+body[data-theme="lime"] {
+  --accent: #ccff00;
+  --accent-dim: rgba(204, 255, 0, 0.15);
+  --accent-glow: rgba(204, 255, 0, 0.4);
+  --accent-hover: #d9ff33;
+  --accent-rgb: 204, 255, 0;
 }
 
 body[data-theme="matrix"] {
@@ -55,14 +83,6 @@ body[data-theme="purple"] {
   --accent-glow: rgba(217, 70, 239, 0.4);
   --accent-hover: #e879f9;
   --accent-rgb: 217, 70, 239;
-}
-
-body[data-theme="amber"] {
-  --accent: #ffb703;
-  --accent-dim: rgba(255, 183, 3, 0.15);
-  --accent-glow: rgba(255, 183, 3, 0.4);
-  --accent-hover: #ffc433;
-  --accent-rgb: 255, 183, 3;
 }
 
 /* Base resets & typography */
@@ -89,7 +109,7 @@ body {
 /* Custom Selection */
 ::selection {
   background: var(--accent);
-  color: #000;
+  color: #1a1f2e;
 }
 
 /* Brutalist Typography Utilities */
@@ -152,13 +172,30 @@ body {
   -webkit-text-stroke: 1.5px var(--accent);
 }
 
+/* Gradient Utilities based on palette */
+.gradient-flame {
+  background: linear-gradient(135deg, #ff7a00 0%, #ff3d7f 55%, #ffc107 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ff7a00 0%, #ff3d7f 50%, #ffc107 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-rose {
+  background: linear-gradient(135deg, #ff7a00 0%, #ff3d7f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* Film Grain Overlay */
 .grain {
   position: fixed;
   inset: -10%;
   z-index: 9998;
   pointer-events: none;
-  opacity: 0.18;
+  opacity: 0.16;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   animation: grainShift 0.7s steps(1) infinite;
 }
@@ -178,7 +215,7 @@ body {
   inset: 0;
   z-index: 9997;
   pointer-events: none;
-  background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.65) 100%);
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(15, 20, 32, 0.75) 100%);
 }
 
 /* Custom Scrollbar */
@@ -202,14 +239,14 @@ body {
 
 /* Glassmorphism utility */
 .glass-panel {
-  background: rgba(14, 14, 18, 0.75);
+  background: rgba(26, 31, 46, 0.80);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--line);
 }
 
 .glass-panel-accent {
-  background: rgba(14, 14, 18, 0.85);
+  background: rgba(26, 31, 46, 0.90);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--accent-glow);

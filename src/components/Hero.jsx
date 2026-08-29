@@ -23,9 +23,14 @@ export default function Hero({ onOpenResumeModal }) {
 
     window.addEventListener('resize', onResize);
 
-    // Particle nodes for subtle cyber constellation effect
+    // Particle nodes for subtle sunset cyber constellation effect
     const numParticles = Math.min(55, Math.floor((width * height) / 18000));
     const particles = [];
+    const paletteColors = [
+      'rgba(255, 122, 0, 0.65)',   // #FF7A00 Flame Orange
+      'rgba(255, 61, 127, 0.65)',  // #FF3D7F Vivid Rose
+      'rgba(255, 193, 7, 0.65)',   // #FFC107 Warm Amber
+    ];
 
     for (let i = 0; i < numParticles; i++) {
       particles.push({
@@ -33,7 +38,8 @@ export default function Hero({ onOpenResumeModal }) {
         y: Math.random() * height,
         vx: (Math.random() - 0.5) * 0.45,
         vy: (Math.random() - 0.5) * 0.45,
-        size: Math.random() * 1.8 + 0.8,
+        size: Math.random() * 1.8 + 0.9,
+        color: paletteColors[i % paletteColors.length],
       });
     }
 
@@ -50,7 +56,7 @@ export default function Hero({ onOpenResumeModal }) {
       ctx.clearRect(0, 0, width, height);
 
       // Draw subtle architectural grid background
-      ctx.strokeStyle = 'rgba(239, 235, 228, 0.025)';
+      ctx.strokeStyle = 'rgba(255, 243, 224, 0.025)';
       ctx.lineWidth = 1;
       const gridSize = 48;
       for (let x = 0; x < width; x += gridSize) {
@@ -85,7 +91,7 @@ export default function Hero({ onOpenResumeModal }) {
           p.y += (dy / dist) * force * 1.5;
         }
 
-        ctx.fillStyle = 'rgba(204, 255, 0, 0.45)';
+        ctx.fillStyle = p.color;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fill();
@@ -98,8 +104,8 @@ export default function Hero({ onOpenResumeModal }) {
           const d = Math.sqrt(dxx * dxx + dyy * dyy);
 
           if (d < 110) {
-            const alpha = (1 - d / 110) * 0.14;
-            ctx.strokeStyle = `rgba(204, 255, 0, ${alpha})`;
+            const alpha = (1 - d / 110) * 0.16;
+            ctx.strokeStyle = `rgba(255, 122, 0, ${alpha})`;
             ctx.lineWidth = 0.8;
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
@@ -132,7 +138,7 @@ export default function Hero({ onOpenResumeModal }) {
       {/* Background Interactive Particle Canvas */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <canvas ref={canvasRef} className="w-full h-full block" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#08080a]/40 to-[#08080a]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0f1420]/40 to-[#0f1420]" />
       </div>
 
       <div className="shell relative z-10 flex-1 flex flex-col justify-between">
@@ -163,7 +169,7 @@ export default function Hero({ onOpenResumeModal }) {
               <h1 className="font-display text-[15vw] sm:text-[14vw] md:text-[13vw] lg:text-[12rem] xl:text-[14rem] tracking-tight leading-[0.82] stroke-text">
                 KHOMANE
               </h1>
-              <span className="serif-it text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-[var(--accent)] tracking-tight ml-2">
+              <span className="serif-it text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-gradient ml-2">
                 — Engineer & Scholar
               </span>
             </div>
@@ -183,7 +189,7 @@ export default function Hero({ onOpenResumeModal }) {
             <div className="lg:col-span-5 flex flex-wrap items-center gap-3 lg:justify-end">
               <button
                 onClick={() => scrollTo('#projects')}
-                className="group px-6 py-3.5 bg-[var(--accent)] text-black font-mono text-xs uppercase font-bold tracking-wider flex items-center gap-2 hover:bg-[var(--accent-hover)] transition-all shadow-[0_0_20px_var(--accent-glow)]"
+                className="group px-6 py-3.5 bg-[var(--accent)] text-[#1a1f2e] font-mono text-xs uppercase font-bold tracking-wider flex items-center gap-2 hover:bg-[var(--accent-hover)] transition-all shadow-[0_0_22px_var(--accent-glow)]"
               >
                 <span>EXPLORE WORK</span>
                 <ArrowDownRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:translate-y-0.5 transition-transform" />
@@ -214,8 +220,8 @@ export default function Hero({ onOpenResumeModal }) {
         {/* Bottom Stats Banner & Scroll Down Indicator */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-white/10">
           {portfolioData.personal.stats.map((stat, idx) => (
-            <div key={idx} className="flex flex-col gap-1 p-3 rounded-sm bg-white/[0.02] border border-white/5">
-              <span className="font-mono text-[10px] text-neutral-500 tracking-widest uppercase">{stat.label}</span>
+            <div key={idx} className="flex flex-col gap-1 p-3 rounded-sm bg-[#1a1f2e]/60 border border-white/10 hover:border-[var(--accent)]/40 transition-colors">
+              <span className="font-mono text-[10px] text-neutral-400 tracking-widest uppercase">{stat.label}</span>
               <span className="font-sans text-sm sm:text-base font-semibold text-white">{stat.value}</span>
               <span className="font-mono text-xs text-[var(--accent)]">{stat.highlight}</span>
             </div>

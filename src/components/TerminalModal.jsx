@@ -107,12 +107,12 @@ Contact: ${portfolioData.personal.email} | ${portfolioData.personal.phone}`,
         });
       } else if (cmd.startsWith('theme ')) {
         const t = cmd.split(' ')[1];
-        if (['lime', 'cyan', 'matrix', 'purple', 'amber'].includes(t)) {
+        if (['flame', 'rose', 'gold', 'lime', 'cyan', 'matrix', 'purple'].includes(t)) {
           document.body.removeAttribute('data-theme');
-          if (t !== 'lime') document.body.setAttribute('data-theme', t);
+          if (t !== 'flame') document.body.setAttribute('data-theme', t);
           newHistory.push({ type: 'sys', text: `Theme successfully updated to "${t}".` });
         } else {
-          newHistory.push({ type: 'err', text: `Unknown theme "${t}". Use: lime, cyan, matrix, purple, amber` });
+          newHistory.push({ type: 'err', text: `Unknown theme "${t}". Available: flame, rose, gold, lime, cyan, matrix, purple` });
         }
       } else if (cmd === 'clear') {
         setHistory([]);
@@ -156,9 +156,9 @@ Contact: ${portfolioData.personal.email} | ${portfolioData.personal.phone}`,
 
   return (
     <div className="fixed inset-0 z-[9600] flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md animate-fadeIn">
-      <div className="relative w-full max-w-3xl h-[80vh] max-h-[600px] flex flex-col bg-[#060608] border border-[var(--accent)]/40 rounded-sm shadow-[0_0_50px_rgba(0,0,0,0.8)] overflow-hidden font-mono text-xs">
+      <div className="relative w-full max-w-3xl h-[80vh] max-h-[600px] flex flex-col bg-[#0f1420] border border-[var(--accent)]/40 rounded-sm shadow-[0_0_50px_rgba(0,0,0,0.8)] overflow-hidden font-mono text-xs">
         {/* Terminal Titlebar */}
-        <div className="flex items-center justify-between px-4 py-2.5 bg-[#121218] border-b border-white/10 select-none">
+        <div className="flex items-center justify-between px-4 py-2.5 bg-[#1a1f2e] border-b border-white/10 select-none">
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-[#ff5f56]" />
             <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />

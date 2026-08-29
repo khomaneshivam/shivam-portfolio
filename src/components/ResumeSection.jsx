@@ -31,7 +31,7 @@ export default function ResumeSection({ isModalOpen, setIsModalOpen }) {
             particleCount: 90,
             spread: 75,
             origin: { y: 0.7 },
-            colors: ['#ccff00', '#00f0ff', '#ffffff', '#ff007f'],
+            colors: ['#ff7a00', '#ff3d7f', '#ffc107', '#fff3e0', '#1a1f2e'],
           });
         } catch (e) {}
 
@@ -71,7 +71,7 @@ export default function ResumeSection({ isModalOpen, setIsModalOpen }) {
   };
 
   return (
-    <section id="resume" className="section relative border-b border-white/10 bg-[#08080a]">
+    <section id="resume" className="section relative border-b border-white/10 bg-[#0f1420]">
       <div className="shell">
         {/* Section Header */}
         <div className="flex items-center justify-between pb-6 mb-12 border-b border-white/10">
@@ -80,7 +80,7 @@ export default function ResumeSection({ isModalOpen, setIsModalOpen }) {
               06 // CURRICULUM VITAE
             </span>
           </div>
-          <span className="font-mono text-xs text-neutral-500 tracking-wider">
+          <span className="font-mono text-xs text-neutral-400 tracking-wider">
             OFFICIAL RESUME DOSSIER
           </span>
         </div>
@@ -90,7 +90,7 @@ export default function ResumeSection({ isModalOpen, setIsModalOpen }) {
           <div className="lg:col-span-7 flex flex-col gap-6">
             <h2 className="font-display text-4xl sm:text-6xl md:text-7xl leading-[0.9] text-white tracking-tight uppercase">
               DOWNLOAD <span className="stroke-text">CURRICULUM</span>{' '}
-              <span className="serif-it text-[var(--accent)] normal-case">Vitae (PDF)</span>
+              <span className="serif-it text-gradient normal-case">Vitae (PDF)</span>
             </h2>
             <p className="text-neutral-300 font-light text-base sm:text-lg leading-relaxed max-w-xl">
               Download the official PDF resume highlighting full-stack engineering at Evolware Solutions, MCA scholar credentials (8.03 CGPA), and specialized technical competencies in MLOps, AWS, and modern web architectures.
@@ -178,7 +178,7 @@ export default function ResumeSection({ isModalOpen, setIsModalOpen }) {
       {/* Resume Viewer Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-[9600] flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md animate-fadeIn">
-          <div className="relative w-full max-w-5xl h-[90vh] flex flex-col bg-[#0e0e12] border border-white/20 rounded-sm shadow-2xl overflow-hidden">
+          <div className="relative w-full max-w-5xl h-[90vh] flex flex-col bg-[#1a1f2e] border border-white/20 rounded-sm shadow-2xl overflow-hidden">
             {/* Modal Controls Bar */}
             <div className="flex flex-wrap items-center justify-between p-3.5 px-6 border-b border-white/10 bg-black/50 gap-3">
               <div className="flex items-center gap-3">
@@ -194,7 +194,7 @@ export default function ResumeSection({ isModalOpen, setIsModalOpen }) {
                   <button
                     onClick={() => setViewMode('pdf')}
                     className={`px-3 py-1 rounded-sm transition-colors ${
-                      viewMode === 'pdf' ? 'bg-[var(--accent)] text-black font-bold' : 'text-neutral-400 hover:text-white'
+                      viewMode === 'pdf' ? 'bg-[var(--accent)] text-[#1a1f2e] font-bold' : 'text-neutral-400 hover:text-white'
                     }`}
                   >
                     PDF VIEWER
@@ -202,7 +202,7 @@ export default function ResumeSection({ isModalOpen, setIsModalOpen }) {
                   <button
                     onClick={() => setViewMode('text')}
                     className={`px-3 py-1 rounded-sm transition-colors ${
-                      viewMode === 'text' ? 'bg-[var(--accent)] text-black font-bold' : 'text-neutral-400 hover:text-white'
+                      viewMode === 'text' ? 'bg-[var(--accent)] text-[#1a1f2e] font-bold' : 'text-neutral-400 hover:text-white'
                     }`}
                   >
                     HTML SUMMARY
@@ -213,7 +213,7 @@ export default function ResumeSection({ isModalOpen, setIsModalOpen }) {
                   href="/Shivam_Khomane_Resume.pdf"
                   download="Shivam_Khomane_Resume.pdf"
                   onClick={playSuccessChime}
-                  className="px-3 py-1.5 rounded-sm bg-[var(--accent)] text-black font-mono text-xs font-bold flex items-center gap-1.5 hover:bg-[var(--accent-hover)] transition-colors"
+                  className="px-3 py-1.5 rounded-sm bg-[var(--accent)] text-[#1a1f2e] font-mono text-xs font-bold flex items-center gap-1.5 hover:bg-[var(--accent-hover)] transition-colors"
                 >
                   <Download className="w-3.5 h-3.5" />
                   <span>DOWNLOAD PDF</span>
@@ -248,7 +248,7 @@ export default function ResumeSection({ isModalOpen, setIsModalOpen }) {
               </div>
             ) : (
               /* Structured HTML Summary View */
-              <div className="flex-1 overflow-y-auto p-6 sm:p-10 font-sans text-neutral-200 bg-[#08080a]">
+              <div className="flex-1 overflow-y-auto p-6 sm:p-10 font-sans text-neutral-200 bg-[#0f1420]">
                 {/* Header */}
                 <div className="text-center pb-6 border-b border-white/15">
                   <h1 className="font-display text-4xl sm:text-5xl text-white tracking-tight uppercase">

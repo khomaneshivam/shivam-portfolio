@@ -13,7 +13,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="section relative border-b border-white/10 bg-[#08080a]">
+    <section id="about" className="section relative border-b border-white/10 bg-[#0f1420]">
       <div className="shell">
         {/* Section Header */}
         <div className="flex items-center justify-between pb-6 mb-12 border-b border-white/10">
@@ -22,7 +22,7 @@ export default function About() {
               01 // BACKGROUND & PHILOSOPHY
             </span>
           </div>
-          <span className="font-mono text-xs text-neutral-500 tracking-wider">
+          <span className="font-mono text-xs text-neutral-400 tracking-wider">
             MCA CANDIDATE • SINHGAD
           </span>
         </div>
@@ -31,7 +31,7 @@ export default function About() {
         <div className="mb-16">
           <h2 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] text-white tracking-tight uppercase">
             BRIDGING <span className="stroke-text">MACHINE LEARNING</span> &{' '}
-            <span className="serif-it text-[var(--accent)] normal-case">Production-Scale</span> SOFTWARE
+            <span className="serif-it text-gradient normal-case">Production-Scale</span> SOFTWARE
           </h2>
         </div>
 
@@ -45,7 +45,7 @@ export default function About() {
             <p className="text-base font-light text-neutral-400 leading-relaxed">
               {personal.bioP2}
             </p>
-            <p className="text-sm font-mono text-neutral-500 leading-relaxed pt-4 border-t border-white/10">
+            <p className="text-sm font-mono text-neutral-400 leading-relaxed pt-4 border-t border-white/10">
               {personal.summary}
             </p>
 
@@ -69,7 +69,7 @@ export default function About() {
 
           {/* Right Core Pillars Cards */}
           <div className="lg:col-span-6 flex flex-col gap-5">
-            <span className="font-mono text-xs tracking-widest text-neutral-500 uppercase">
+            <span className="font-mono text-xs tracking-widest text-neutral-400 uppercase">
               // ARCHITECTURAL PILLARS
             </span>
 
@@ -77,7 +77,7 @@ export default function About() {
               <div
                 key={pillar.number}
                 onMouseEnter={playTick}
-                className="group p-6 sm:p-7 rounded-sm bg-[#0e0e12] border border-white/10 hover:border-[var(--accent)]/60 hover:bg-[#141419] transition-all duration-300 flex flex-col gap-4 relative overflow-hidden"
+                className="group p-6 sm:p-7 rounded-sm bg-[#1a1f2e] border border-white/10 hover:border-[var(--accent)]/60 hover:bg-[#242c3f] transition-all duration-300 flex flex-col gap-4 relative overflow-hidden"
               >
                 {/* Glow accent pill */}
                 <div className="absolute top-0 right-0 w-24 h-24 bg-[var(--accent)]/5 rounded-full blur-xl group-hover:bg-[var(--accent)]/15 transition-all" />

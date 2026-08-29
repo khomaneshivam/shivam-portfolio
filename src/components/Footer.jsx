@@ -10,11 +10,11 @@ export default function Footer({ onOpenTerminal }) {
   };
 
   return (
-    <footer className="border-t border-white/10 bg-[#0e0e12] py-8 text-neutral-400 font-mono text-xs select-none">
+    <footer className="border-t border-white/10 bg-[#1a1f2e] py-8 text-neutral-400 font-mono text-xs select-none">
       <div className="shell flex flex-col sm:flex-row items-center justify-between gap-6">
         {/* Left Branding */}
         <div className="flex items-center gap-3">
-          <div className="w-6 h-6 rounded-sm bg-white/5 border border-white/15 grid place-items-center text-[10px] text-[var(--accent)] font-bold">
+          <div className="w-6 h-6 rounded-sm bg-[#0f1420] border border-[var(--accent)]/30 grid place-items-center text-[10px] text-[var(--accent)] font-bold">
             SK
           </div>
           <div>

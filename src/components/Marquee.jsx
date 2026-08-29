@@ -30,7 +30,7 @@ export default function Marquee() {
   ];
 
   return (
-    <div className="relative border-y border-white/10 bg-[#0e0e12] overflow-hidden py-4 select-none">
+    <div className="relative border-y border-white/10 bg-[#1a1f2e] overflow-hidden py-4 select-none">
       {/* Top Track (Left to Right) */}
       <div className="flex gap-8 whitespace-nowrap animate-marquee mb-3">
         {[...primaryItems, ...primaryItems].map((item, idx) => (

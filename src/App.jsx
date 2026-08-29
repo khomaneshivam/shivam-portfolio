@@ -42,7 +42,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#08080a] text-[#efebe4] selection:bg-[var(--accent)] selection:text-black">
+    <div className="relative min-h-screen bg-[#0f1420] text-[#fff3e0] selection:bg-[var(--accent)] selection:text-[#1a1f2e]">
       {/* Film Grain Texture Overlay */}
       <div className="grain" />
       <div className="vignette" />
@@ -98,7 +98,7 @@ export default function App() {
           setTerminalOpen(true);
         }}
         title="Open Terminal (`~` key)"
-        className="fixed bottom-6 right-6 z-[880] w-10 h-10 rounded-sm bg-[#0e0e12] border border-white/20 hover:border-[var(--accent)] hover:bg-[var(--accent)]/15 text-neutral-300 hover:text-[var(--accent)] flex items-center justify-center transition-all duration-300 shadow-2xl hover:scale-105"
+        className="fixed bottom-6 right-6 z-[880] w-10 h-10 rounded-sm bg-[#1a1f2e] border border-white/20 hover:border-[var(--accent)] hover:bg-[var(--accent)]/15 text-neutral-300 hover:text-[var(--accent)] flex items-center justify-center transition-all duration-300 shadow-2xl hover:scale-105"
       >
         <Terminal className="w-4 h-4" />
       </button>
